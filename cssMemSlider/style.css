@@ -13,8 +13,8 @@
 }
 .slider-wrapper {
     border-radius: 30px;
-    width: 1000px;
-    height: 500px;
+    max-width: 1000px;
+    max-height: 500px;
     overflow: hidden;
 }
 
@@ -35,25 +35,24 @@ img {
     height: 100%;
 }
 
-#r1:checked ~ .s1 {
+#r1:checked ~ .wrapper .slider-wrapper .slides .s1 {
     margin-left: 0;
 }
 
-#r2:checked ~ .s1 {
+#r2:checked ~ .wrapper .slider-wrapper .slides .s1 {
     margin-left: -25%;
 }
 
-#r3:checked ~ .s1 {
+#r3:checked ~ .wrapper .slider-wrapper .slides .s1 {
     margin-left: -50%;
 }
 
-#r4:checked ~ .s1 {
+#r4:checked ~ .wrapper .slider-wrapper .slides .s1 {
     margin-left: -75%;
 }
 
 input[name="r"] {
-    position: absolute;
-    visibility: hidden;
+    display: none;
 }
 
 .navigation {
@@ -70,7 +69,7 @@ input[name="r"] {
     height: 10px;
     width: 10px;
     background-color: indianred;
-    border: 3px solid black;
+    border: 3px solid indianred;
 }
 
 .button:hover {
@@ -78,27 +77,56 @@ input[name="r"] {
 }
 .second-wrapper {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .text-wrapper {
-    width: 500px;
+    max-width: 500px;
     height: 50px;
     display: flex;
-    border: 3px solid black;
     overflow: hidden;
 }
 
 .text-area {
     display: flex;
-    width: 2500px;
+    width: 2000px;
     height: 100%;
 }
 
 .text {
     width: 500px;
-    height: 100%;
+    transition: 3s;
 }
 
+/* #one:target ~ .q1{
+    margin-left: 0px;
+}
 
+#two:target ~ .q1{
+    margin: -250px;
+}
 
+#three:target ~ .q1 {
+    margin: -500px;
+}
 
+#four:target ~ .q1 {
+    margin: -750px;
+} */
+
+#r1:checked ~ .wrapper .second-wrapper .text-wrapper .text-area .q1 {
+    margin-left: 0;
+}
+
+#r2:checked ~ .wrapper .second-wrapper .text-wrapper .text-area .q1 {
+    margin-left: -25%;
+}
+
+#r3:checked ~ .wrapper .second-wrapper .text-wrapper .text-area .q1 {
+    margin-left: -50%;
+}
+
+#r4:checked ~ .wrapper .second-wrapper .text-wrapper .text-area .q1 {
+    margin-left: -75%;
+}
