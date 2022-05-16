@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: peachpuff;
+    background-color: papayawhip;
 }
 
 .wrapper {
@@ -14,7 +14,7 @@ body {
     margin:0 auto;
     padding: 30px;
     gap: 50px;
-    background-color: peachpuff;
+    background-color: papayawhip;
 }
 .slider-wrapper {
     border-radius: 30px;
@@ -103,7 +103,7 @@ input[name="r"] {
 }
 
 .range:hover  .button{
-    background-color: whitesmoke;
+    background-color: pink;
     cursor: pointer;
 }
 .second-wrapper {
@@ -147,7 +147,7 @@ input[name="r"] {
     margin-left: -75%;
 }
 
-@media (max-width: 670px) {
+@media (max-width: 750px) {
     .wrapper {
         gap: 20px;
     }
