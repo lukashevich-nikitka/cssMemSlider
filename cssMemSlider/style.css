@@ -3,12 +3,17 @@
     padding: 0;
 }
 
+body {
+    background-color: peachpuff;
+}
+
 .wrapper {
+    max-width: fit-content;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    margin:0 auto;
+    padding: 30px;
     gap: 50px;
-    padding: 20px;
     background-color: peachpuff;
 }
 .slider-wrapper {
@@ -59,7 +64,7 @@ input[name="r"] {
     order: 1;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 5px;
 }
 
 .button {
@@ -76,9 +81,10 @@ input[name="r"] {
     background-color: whitesmoke;
 }
 .second-wrapper {
+    max-width: 1000px;
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content:space-between;
 }
 
 .text-wrapper {
@@ -99,22 +105,6 @@ input[name="r"] {
     transition: 3s;
 }
 
-/* #one:target ~ .q1{
-    margin-left: 0px;
-}
-
-#two:target ~ .q1{
-    margin: -250px;
-}
-
-#three:target ~ .q1 {
-    margin: -500px;
-}
-
-#four:target ~ .q1 {
-    margin: -750px;
-} */
-
 #r1:checked ~ .wrapper .second-wrapper .text-wrapper .text-area .q1 {
     margin-left: 0;
 }
@@ -129,4 +119,17 @@ input[name="r"] {
 
 #r4:checked ~ .wrapper .second-wrapper .text-wrapper .text-area .q1 {
     margin-left: -75%;
+}
+
+@media (max-width: 670px) {
+    .wrapper {
+        gap: 20px;
+    }
+   .second-wrapper {
+       gap: 20px;
+   }
+   .navigation {
+       margin: 0 auto;
+       order: -1;
+   }
 }
